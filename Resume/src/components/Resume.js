@@ -4,10 +4,12 @@ import tree from "./tree.jpg"
 import { GoLink } from "react-icons/go";
 import { CiLocationOn } from "react-icons/ci";
 import { FaCalendarAlt } from "react-icons/fa";
+import { ProgressBar } from 'react-bootstrap';
+
 
 export default function Resume() {
     return (
-        <div style={{ margin: 20 }}>
+        <div style={{ margin: 20, border: '1px solid black', padding: 40, marginTop: 50, marginLeft: 50, maxWidth: 1100 }}>
             <header>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div>
@@ -21,7 +23,6 @@ export default function Resume() {
                     </div>
                     <img src={tree} alt="tree" height="100px" width="100px" style={{ borderRadius: "50px" }} />
                 </div>
-
                 <br />
                 <br />
             </header>
@@ -31,10 +32,10 @@ export default function Resume() {
                     <p>EXPERIENCE</p>
                     <hr />
                     <p><b>Senior Digital Marketing Manager</b></p>
-                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 20 }}>
                         <span className='color'>Streich</span>
                         <span style={{ display: 'flex', gap: 10 }}>
-                            <p><FaCalendarAlt />2015-Ongoing</p>
+                            <p><FaCalendarAlt /> 2015-Ongoing</p>
                             <p><CiLocationOn /> Melbourne,Australia</p>
                         </span>
                     </p>
@@ -51,8 +52,13 @@ export default function Resume() {
                     </ul>
 
                     <h3>Marketing Manager</h3>
-                    <p><span className='color'>Bernier</span>  <span style={{ "margin": "300px" }}><FaCalendarAlt />2013-2015 <CiLocationOn />Melbourne,Australia</span></p>
-                    <p>
+                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 20 }}>
+                        <span className='color'>Bernier</span>
+                        <span style={{ display: 'flex', gap: 10 }}>
+                            <p><FaCalendarAlt /> 2013-2015</p>
+                            <p><CiLocationOn /> Melbourne,Australia</p>
+                        </span>
+                    </p>                    <p>
                         Bernier consits of a decision support system for qualified health professional to quality and efficienty perform the pre-operative planning of anyboryhopedic procedure in 3 dimewnsions,using 2D image data from the patient.
                     </p>
                     <ul>
@@ -65,8 +71,13 @@ export default function Resume() {
                         </li>
                     </ul>
                     <h3> Digital Marketing Streaingth</h3>
-                    <p><span className='color'>Harvey</span>   <span style={{ "margin": "300px" }}><FaCalendarAlt />2013-2015 <CiLocationOn />Melbourne,Australia</span></p>
-                    <p>
+                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 20 }}>
+                        <span className='color'>Harvey</span>
+                        <span style={{ display: 'flex', gap: 10 }}>
+                            <p><FaCalendarAlt /> 2010-2013</p>
+                            <p><CiLocationOn /> Melbourne,Australia</p>
+                        </span>
+                    </p>                    <p>
                         Harvey is  A cloud-based HR software business.
                     </p>
                     <ul>
@@ -79,8 +90,13 @@ export default function Resume() {
                         </li>
                     </ul>
                     <h3>Marketing Specialist</h3>
-                    <p><span>Boyle Ltd. </span> <span style={{ "margin": "300px" }}><FaCalendarAlt />2013-2015 <CiLocationOn />Melbourne,Australia</span></p>
-
+                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 20 }}>
+                        <span className='color'>Boyle Ltd.</span>
+                        <span style={{ display: 'flex', gap: 10 }}>
+                            <p><FaCalendarAlt /> 2009-2010</p>
+                            <p><CiLocationOn /> Melbourne,Australia</p>
+                        </span>
+                    </p>
                     <ul>
                         <li>
                             REformed CMS to Boots content productios by 45% whiole reducing turn over from 25% to 0% in the first year.REformed CMS to Boots content productios by 45% whiole reducing turn over from 25% to 0% in the first year.
@@ -97,29 +113,61 @@ export default function Resume() {
                     <br />
                     <p style={{ "borderBottom": "1px solid black" }}>EDUCATION</p>
                     <p><b>Master of Arts,Digital Communication</b></p>
-                    <p ><span className='color' >UNiversity of Melbourne</span>  <span style={{ "margin": "400px" }}> <FaCalendarAlt />2009-2010</span></p>
+                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 20 }}>
+                        <span className='color'>University of Melbourne</span>
+                        <span style={{ display: 'flex', gap: 10 }}>
+                            <p><FaCalendarAlt /> 2009-2010</p>
+                        </span>
+                    </p>
 
                     <p><b>BA in Marketing</b></p>
-                    <p ><span className='color' >Monas University</span> <span style={{ "margin": "400px" }}><FaCalendarAlt />2009-2010</span></p>
+                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: 20 }}>
+                        <span className='color' style={{ "marginTop": "-20px" }}>Monash University</span>
+                        <span style={{ display: 'flex', gap: 10 }}>
+                            <p><FaCalendarAlt /> 2005-2010</p>
+
+                        </span>
+                    </p>
                     <br />
                     <p style={{ "borderBottom": "1px solid black" }}>INDUSTRY EXPERTISE</p>
-                    <div style={{ "display": "flex", "gap": "60px" }}>
 
-                        <h3 className='color'>Agency</h3>
-                        <h3 className='color'>
-                            Healthcare
-                        </h3>
+                    <div style={{ display: "flex", gap: "60px" }}>
+                        <div style={{ flex: "1" }}>
+                            <h3 className='color'>Agency</h3>
+                            <div className="custom-progress">
+                                <div className="custom-progress-bar-success" style={{ width: '100%' }}> - </div>
+                            </div>
+                            {/* <ProgressBar now={100} label={`${100}%`} /> */}
+                        </div>
+                        <div style={{ flex: "1" }}>
+                            <h3 className='color'>Healthcare</h3>
+                            <div className="custom-progress">
+                                <div className="custom-progress-bar-success" style={{ width: '80%' }}> - </div>
+                            </div>
+                            {/* <ProgressBar now={80} label={`${80}%`} /> */}
+                        </div>
+
+
                     </div>
                     <div style={{ "display": "flex", "gap": "60px" }}>
-                        <h3 className='color'>
-                            Traditional print india
-                        </h3>
-                        <h3 className='color'>
-                            HR software
-                        </h3>
+                        <div style={{ flex: "1" }}>
+                            <h3 className='color'>Traditional print media</h3>
+                            <div className="custom-progress">
+                                <div className="custom-progress-bar-success" style={{ width: '40%' }}> - </div>
+                            </div>
+                        </div>
+                        <div style={{ flex: "1" }}>
+                            <h3 className='color'>HR Software</h3>
+                            <div className="custom-progress">
+                                <div className="custom-progress-bar-success" style={{ width: '80%' }}> - </div>
+                            </div>
+                        </div>
+
                     </div>
+
 
                 </div>
+
 
                 <div style={{ width: '40%' }}>
                     <p>SUMMARY</p>
